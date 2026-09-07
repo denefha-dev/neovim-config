@@ -1,3 +1,5 @@
+-- ctrl + \ , untuk terminal float di tengah
+
 return {
   "akinsho/toggleterm.nvim",
   opts = {
