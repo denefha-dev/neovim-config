@@ -21,4 +21,7 @@ vim.keymap.set("v", "<A-Up>", ":m '<-2<CR>gv=gv", { desc = "Move selection up" }
 -- ctrl + n (normal mode)
 vim.keymap.set("i", "<C-n>", "<Esc>", { desc = "Exit insert mode" })
 
+-- Ctrl + Enter → buat baris baru di bawah
+vim.keymap.set("n", "<C-CR>", "o<Esc>", { desc = "New line below" })
+
 -- ============================================================
