@@ -1,21 +1,22 @@
 return {
   {
     "nvim-treesitter/nvim-treesitter",
-    build = ":TSUpdate",
-    event = { "BufReadPost", "BufNewFile" },
     opts = {
       ensure_installed = {
         "html",
         "javascript",
         "css",
         "lua",
+        "vim",
+        "vimdoc",
+        "bash",
+        "json",
+        "typescript",
+        "tsx",
+        "yaml",
+        "markdown",
+        "markdown_inline",
       },
-      highlight = {
-        enable = true,
-      },
-      config = function(_, opts)
-        require("nvim-treesitter.configs").setup(opts)
-      end,
     },
   },
 }
