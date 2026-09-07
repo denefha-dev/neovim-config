@@ -1,48 +1,117 @@
+-- ============================================================
+-- Bootstrap lazy.nvim
+-- ============================================================
+
+-- Lokasi instalasi lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+
+-- Jika lazy.nvim belum terinstall, clone dari GitHub
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
   local lazyrepo = "https://github.com/folke/lazy.nvim.git"
-  local out = vim.fn.system({ "git", "clone", "--filter=blob:none", "--branch=stable", lazyrepo, lazypath })
+
+  local out = vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "--branch=stable",
+    lazyrepo,
+    lazypath,
+  })
+
+  -- Jika proses clone gagal
   if vim.v.shell_error ~= 0 then
     vim.api.nvim_echo({
       { "Failed to clone lazy.nvim:\n", "ErrorMsg" },
       { out, "WarningMsg" },
       { "\nPress any key to exit..." },
     }, true, {})
+
     vim.fn.getchar()
     os.exit(1)
   end
 end
+
+-- Masukkan lazy.nvim ke runtime path Neovim
 vim.opt.rtp:prepend(lazypath)
 
+
+-- ============================================================
+-- Setup lazy.nvim
+-- ============================================================
+
 require("lazy").setup({
+
+  -- ----------------------------------------------------------
+  -- Plugin specification
+  -- ----------------------------------------------------------
+
   spec = {
-    -- add LazyVim and import its plugins
-    { "LazyVim/LazyVim", import = "lazyvim.plugins" },
-    -- import/override with your plugins
-    { import = "plugins" },
+
+    -- Load LazyVim beserta plugin bawaannya
+    {
+      "LazyVim/LazyVim",
+      import = "lazyvim.plugins",
+    },
+
+    -- Load plugin custom dari:
+    -- ~/.config/nvim/lua/plugins/
+    {
+      import = "plugins",
+    },
   },
+
+
+  -- ----------------------------------------------------------
+  -- Default plugin settings
+  -- ----------------------------------------------------------
+
   defaults = {
-    -- By default, only LazyVim plugins will be lazy-loaded. Your custom plugins will load during startup.
-    -- If you know what you're doing, you can set this to `true` to have all your custom plugins lazy-loaded by default.
+
+    -- Plugin custom tidak lazy-load secara default
     lazy = false,
-    -- It's recommended to leave version=false for now, since a lot the plugin that support versioning,
-    -- have outdated releases, which may break your Neovim install.
-    version = false, -- always use the latest git commit
-    -- version = "*", -- try installing the latest stable version for plugins that support semver
+
+    -- Gunakan versi/commit terbaru
+    version = false,
   },
-  install = { colorscheme = { "tokyonight", "habamax" } },
+
+
+  -- ----------------------------------------------------------
+  -- Colorscheme
+  -- ----------------------------------------------------------
+
+  install = {
+    colorscheme = {
+      "tokyonight",
+      "habamax",
+    },
+  },
+
+
+  -- ----------------------------------------------------------
+  -- Plugin update checker
+  -- ----------------------------------------------------------
+
   checker = {
-    enabled = true, -- check for plugin updates periodically
-    notify = false, -- notify on update
-  }, -- automatically check for plugin updates
+
+    -- Cek update plugin secara berkala
+    enabled = true,
+
+    -- Jangan tampilkan notifikasi update
+    notify = false,
+  },
+
+
+  -- ----------------------------------------------------------
+  -- Performance
+  -- ----------------------------------------------------------
+
   performance = {
+
     rtp = {
-      -- disable some rtp plugins
+
+      -- Plugin bawaan Neovim yang dinonaktifkan
       disabled_plugins = {
         "gzip",
-        -- "matchit",
-        -- "matchparen",
-        -- "netrwPlugin",
         "tarPlugin",
         "tohtml",
         "tutor",
@@ -51,3 +120,4 @@ require("lazy").setup({
     },
   },
 })
+
