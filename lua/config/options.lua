@@ -8,3 +8,6 @@ vim.opt.relativenumber = false -- off relative number
 
 -- clipboard active
 vim.opt.clipboard = "unnamedplus"
+
+-- Tree-sitter parser/query directory
+vim.opt.runtimepath:append(vim.fn.stdpath("data") .. "/site")
