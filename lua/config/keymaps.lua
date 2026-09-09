@@ -32,3 +32,14 @@ vim.keymap.set("n", "<leader>rr", function()
 end, { desc = "Reload Neovim config" })
 
 -- ============================================================
+
+-- esc Clear search highlight
+vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>", { desc = "Clear search highlight", silent = true })
+
+-- Indent and keep selection
+vim.keymap.set("v", ">", ">gv", { desc = "Indent and keep selection" })
+
+-- Unindent and keep selection
+vim.keymap.set("v", "<", "<gv", { desc = "Unindent and keep selection" })
+
+-- ============================================================
