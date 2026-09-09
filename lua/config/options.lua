@@ -10,9 +10,6 @@ vim.opt.statuscolumn = "%C%s%=%{printf('%4d %3d  ', v:lnum, v:relnum)}"
 -- clipboard active
 vim.opt.clipboard = "unnamedplus"
 
--- Tree-sitter parser/query directory
-vim.opt.runtimepath:append(vim.fn.stdpath("data") .. "/site")
-
 -- Display invisible characters
 vim.opt.list = true
 vim.opt.listchars = { tab = "→ ", trail = "·", nbsp = "␣" }
