@@ -2,9 +2,9 @@
 -- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
 -- Add any additional options here
 
--- options LazyVim
-vim.opt.number = true -- nomor baris
-vim.opt.relativenumber = true -- relative number
+-- Absolute + relative line numbers
+vim.opt.number = true
+vim.opt.relativenumber = true
 
 -- clipboard active
 vim.opt.clipboard = "unnamedplus"
