@@ -5,6 +5,7 @@
 -- Absolute + relative line numbers
 vim.opt.number = true
 vim.opt.relativenumber = true
+vim.opt.statuscolumn = "%C%s%=%{printf('%4d %3d  ', v:lnum, v:relnum)}"
 
 -- clipboard active
 vim.opt.clipboard = "unnamedplus"
@@ -45,6 +46,3 @@ vim.opt.backup = false
 -- :set backup? --> melihat backup or nonbackup
 -- :set backup
 -- :set nonbackup
-
--- Sign column
-vim.opt.signcolumn = "yes"
