@@ -182,7 +182,7 @@ Ctrl + Enter                Baris baru
 Alt + Up                    Pindah baris ke atas
 Alt + Down                  Pindah baris ke bawah
 
-Space + r + r               Reload Neovim
+Space + r + r               Reload Config
 
 ======================================================
 
