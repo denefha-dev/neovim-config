@@ -25,3 +25,10 @@ vim.keymap.set("i", "<C-n>", "<Esc>", { desc = "Exit insert mode" })
 vim.keymap.set("n", "<C-CR>", "o<Esc>", { desc = "New line below" })
 
 -- ============================================================
+
+-- Space + r + r Reload Neovim configuration
+vim.keymap.set("n", "<leader>rr", function()
+  vim.cmd("source " .. vim.fn.stdpath("config") .. "/init.lua")
+end, { desc = "Reload Neovim config" })
+
+-- ============================================================

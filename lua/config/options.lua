@@ -4,10 +4,47 @@
 
 -- options LazyVim
 vim.opt.number = true -- nomor baris
-vim.opt.relativenumber = false -- off relative number
+vim.opt.relativenumber = true -- relative number
 
 -- clipboard active
 vim.opt.clipboard = "unnamedplus"
 
 -- Tree-sitter parser/query directory
 vim.opt.runtimepath:append(vim.fn.stdpath("data") .. "/site")
+
+-- Display invisible characters
+vim.opt.list = true
+vim.opt.listchars = { tab = "→ ", trail = "·", nbsp = "␣" }
+
+-- Indentation
+vim.opt.shiftwidth = 4
+vim.opt.expandtab = true
+vim.opt.softtabstop = 4
+vim.opt.tabstop = 4
+
+-- Smart indentation
+vim.opt.smartindent = true
+
+-- Search --> use /ur_search
+vim.opt.incsearch = true
+vim.opt.hlsearch = true
+vim.opt.ruler = true
+
+-- Incremental command preview --
+-- vim.opt.inccommand = "split"
+---> use :set inccommand=split  or :set inccommand=split
+-- %s/your_search/change
+
+-- Split direction
+vim.opt.splitbelow = true
+vim.opt.splitright = true
+
+-- File protection
+vim.opt.swapfile = true
+vim.opt.backup = false
+-- :set backup? --> melihat backup or nonbackup
+-- :set backup
+-- :set nonbackup
+
+-- Sign column
+vim.opt.signcolumn = "yes"
