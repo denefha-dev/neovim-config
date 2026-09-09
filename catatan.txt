@@ -1,0 +1,195 @@
+# NEOVIM + LAZYVIM
+
+======================================================
+
+# BASIC
+
+nvim --version              Cek versi Neovim
+nvim .                      Buka project
+~/.config/nvim              Neovim config
+
+======================================================
+
+# KEY MAPS
+
+Space                       Leader / Menu
+Space + e                   Explorer
+Space + Space               Cari file
+Space + ,                   Buffer
+Space + f + t               Terminal
+Ctrl + /                    Toggle terminal
+Ctrl + \                    Floating terminal
+Space + u + C               Ganti theme (C besar)
+Space + u + f               ON / OFF auto-format
+Space + c + f               Format file
+
+======================================================
+
+# MODE
+
+Esc                         Normal mode
+i                           Insert mode
+v                           Visual mode
+
+======================================================
+
+# NORMAL MODE
+
+:w                          Simpan
+:q                          Keluar
+:wq                         Simpan + keluar
+:q!                         Keluar tanpa simpan
+
+:bn                         Buffer berikutnya
+:bp                         Buffer sebelumnya
+:bn 2                       Maju 2 buffer
+:bp 2                       Mundur 2 buffer
+
+:set noro                   Nonaktifkan readonly
+:set modifiable             Aktifkan edit buffer
+
+======================================================
+
+# NAVIGATION
+
+h                           Kiri
+j                           Bawah
+k                           Atas
+l                           Kanan
+
+w                           Kata berikutnya
+b                           Kata sebelumnya
+e                           Akhir kata
+
+0                           Awal baris
+$                           Akhir baris
+gg                          Awal file
+G                           Akhir file
+
+======================================================
+
+# COPY / PASTE
+
+v                           Pilih / blok
+y                           Copy
+yy                          Copy 1 baris
+p                           Paste bawah
+P                           Paste atas
+
+yy + p                      Duplikat ke bawah
+yy + P                      Duplikat ke atas
+ggVG                        Pilih semua
+
+======================================================
+
+# INSERT
+
+o                           Baris baru di bawah
+O                           Baris baru di atas
+
+======================================================
+
+# DELETE
+
+dd                          Hapus baris
+x                           Hapus karakter kanan
+X                           Hapus karakter kiri
+dw                          Hapus kata
+dj                          Hapus ke bawah
+dk                          Hapus ke atas
+
+======================================================
+
+# UNDO / REDO
+
+u                           Undo
+Ctrl + r                    Redo
+
+======================================================
+
+# COMMENT
+
+gcc                         Comment / uncomment baris
+gc                          Comment / uncomment selection
+
+Contoh:
+V + jj + gc                 Comment 3 baris
+
+======================================================
+
+# WINDOW / SPLIT
+
+Ctrl + w + v                Split kanan
+Ctrl + w + s                Split bawah
+
+Ctrl + h                    Window kiri
+Ctrl + j                    Window bawah
+Ctrl + k                    Window atas
+Ctrl + l                    Window kanan
+
+======================================================
+
+# EXPLORER
+
+Space + e                   Explorer
+a                           Tambah file / directory
+m                           Rename
+d                           Hapus
+
+======================================================
+
+# BUFFER
+
+Space + ,                   Lihat buffer
+Space + b + d               Tutup buffer
+
+======================================================
+
+# TERMINAL
+
+Ctrl + /                    Toggle terminal
+Ctrl + \                    Floating terminal
+
+======================================================
+
+# FORMATTING
+
+Space + u + f               ON / OFF auto-format
+Space + c + f               Format manual
+
+:Auto-format ON             Format otomatis saat save
+:Auto-format OFF            Hanya save
+
+======================================================
+
+# MASON
+
+:Mason                      Buka Mason
+i                           Install package
+:MasonInstall <package>     Install package
+
+Mason = Manager:
+LSP / Formatter / Linter / Debugger
+
+======================================================
+
+# MY KEY MAPS
+
+Ctrl + s                    Save + Normal mode
+Ctrl + n                    Keluar Insert mode
+Ctrl + Enter                Baris baru
+
+Alt + Up                    Pindah baris ke atas
+Alt + Down                  Pindah baris ke bawah
+
+Space + r + r               Reload Neovim
+
+======================================================
+
+# BUFFER / WINDOW / TAB
+
+Buffer                      File yang dibuka
+Window                      Area untuk menampilkan buffer
+Tab                         Workspace
+
+======================================================
