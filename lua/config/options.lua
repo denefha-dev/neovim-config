@@ -43,3 +43,6 @@ vim.opt.backup = false
 -- :set backup? --> melihat backup or nonbackup
 -- :set backup
 -- :set nonbackup
+
+-- Catppuccin
+vim.g.lazyvim_preferred_color_scheme = "catppuccin"
