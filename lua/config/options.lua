@@ -5,7 +5,7 @@
 -- Absolute + relative line numbers
 vim.opt.number = true
 vim.opt.relativenumber = true
-vim.opt.statuscolumn = "%C%s%=%{printf('%4d %3d  ', v:lnum, v:relnum)}"
+vim.opt.statuscolumn = "%C%s%{printf('%3d %3d ', v:lnum, v:relnum)}"
 
 -- clipboard active
 vim.opt.clipboard = "unnamedplus"
