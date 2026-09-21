@@ -2,3 +2,4 @@
 
 TERMINAL :
 1) liver-server = menjalankan file html
+   sudo npm install -g live-server (linux)
