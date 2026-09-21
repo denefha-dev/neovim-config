@@ -1,0 +1,4 @@
+========= KEBUTUHAN PROJECT ========= 
+
+TERMINAL :
+1) liver-server = menjalankan file html
