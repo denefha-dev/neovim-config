@@ -34,4 +34,18 @@ return {
       },
     },
   },
+
+  -- icon .env
+  {
+    "nvim-tree/nvim-web-devicons",
+    opts = {
+      override = {
+        env = {
+          icon = "",
+          color = "#cdd6f4",
+          name = "Env",
+        },
+      },
+    },
+  },
 }
